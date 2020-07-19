@@ -5,11 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    todos: []
   },
   mutations: {
+    addTodo(state, payload){
+      state.todos = [
+        ...state.todos,
+        payload
+      ]
+    }
   },
-  actions: {
-  },
-  modules: {
+  getters:{
+    todosCount(state){
+      return state.todos.length
+    }
   }
 })
