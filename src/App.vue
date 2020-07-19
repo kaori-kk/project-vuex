@@ -18,6 +18,9 @@ export default {
     CreateTodo,
     TodosCount,
     ListTodo
+  },
+  mounted(){
+    this.$store.dispatch("getTodos")
   }
 }
 </script> 

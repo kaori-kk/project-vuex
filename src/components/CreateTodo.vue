@@ -9,7 +9,7 @@ export default {
   }),
   methods: {
     saveToDo(){
-      this.$store.commit("addTodo", this.todo)
+      this.$store.dispatch("addTodo", this.todo)
     }
   }
 }
